@@ -1,0 +1,11 @@
+[Unit]
+Description=Raspberry Pi Power Button Shutdown
+After=syslog.target
+
+[Service]
+Type=idle
+ExecStart=/usr/local/bin/listen-for-shutdown.py
+
+[Install]
+WantedBy=multi-user.target
+
